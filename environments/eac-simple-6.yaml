@@ -42,3 +42,4 @@ grains:
         - test_input2: "input26666"        
       outputs:
         - output2
+
