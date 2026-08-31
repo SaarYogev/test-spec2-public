@@ -27,7 +27,7 @@ inputs:
   execution_host1:
     type: agent
     default: saar-dev-kube
-    description: must be kubernetes
+    description: must be k8s
   execution_host2:
     type: agent
     default: saar-dev-kube
@@ -41,7 +41,7 @@ inputs:
     description: the name of helm release
   generic_input:
     type: string
-    default: nothing
+    default: none
     description: an input for testing
   secret_input:
     type: string
@@ -145,7 +145,7 @@ grains:
         name: '{{ .inputs.execution_host1 }}'
         service-account: '{{.inputs.service_account}}'
       inputs:
-        - name: '{{ .inputs.generic_input }}'
+        - name: '{{ .inputs.generic_input }}2'
       inventory-file:
         localhost:
           hosts:
