@@ -27,7 +27,7 @@ inputs:
   execution_host1:
     type: agent
     default: saar-dev-kube
-    description: must be k8s
+    description: must be kubernetes
   execution_host2:
     type: agent
     default: saar-dev-kube
