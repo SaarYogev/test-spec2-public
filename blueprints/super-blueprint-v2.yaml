@@ -23,16 +23,18 @@ outputs:
 inputs:
   namespace:
     type: string
-    default: yakir-test
+    default: super-blueprint-v2
   execution_host1:
-    type: agent    
+    type: agent
+    default: saar-dev-kube
     description: must be k8s
   execution_host2:
-    type: agent    
+    type: agent
+    default: saar-dev-kube
     description: can be k8s or docker
   service_account:
     type: string
-    default: default
+    default: torque-runner
   release_name:
     type: string
     default: ''
@@ -49,7 +51,7 @@ inputs:
     description: secret input for testing  
   store:
     type: string
-    # default: iac-samples
+    default: test-spec2-public
 
 
 # Dependencies Schema
