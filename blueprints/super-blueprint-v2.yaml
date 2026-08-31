@@ -293,6 +293,8 @@ grains:
         service-account: '{{.inputs.service_account}}'
       tags:
         auto-tag: false
+      env-vars:
+        - TG_STATE_KEY_NAME: '{{ sandboxid | downcase }}-terragrunt1'
       scripts:
         pre-tf-init:
           source:
