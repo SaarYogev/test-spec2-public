@@ -77,6 +77,7 @@ grains:
         store: test-spec2-public
       agent:
         name: '{{.inputs.execution_host1}}'      
+        service-account: '{{.inputs.service_account}}'
       workspace-directories:
         - source: 
             name: workspace_dir1
@@ -101,6 +102,7 @@ grains:
         store: test-spec2-public
       agent:
         name: '{{.inputs.execution_host1}}'
+        service-account: '{{.inputs.service_account}}'
       commands:
         - dep up helm/deployment
       release: '{{.inputs.release_name}}'
@@ -139,6 +141,7 @@ grains:
         path: ansible/hello_world.yaml
       agent:
         name: '{{ .inputs.execution_host1 }}'
+        service-account: '{{.inputs.service_account}}'
       inputs:
         - name: '{{ .inputs.generic_input }}'
       inventory-file:
@@ -157,6 +160,7 @@ grains:
 #        branch: yakir-test
       agent:
         name: '{{.inputs.execution_host1}}'
+        service-account: '{{.inputs.service_account}}'
         isolated: false
       inputs:
         - test_input1: '{{.grains.terraform1.outputs.output1}}'
@@ -206,6 +210,7 @@ grains:
         path: https://github.com/QualiNext/test-spec2-public.git//helm/deployment
       agent:
         name: '{{.inputs.execution_host1}}'
+        service-account: '{{.inputs.service_account}}'
       commands:
         - dep up helm/deployment
       release: '{{.inputs.release_name}}'
@@ -231,6 +236,7 @@ grains:
 #        branch: yakir-test
       agent:
         name: '{{.inputs.execution_host1}}'
+        service-account: '{{.inputs.service_account}}'
         isolated: false
       scripts:
         pre-tofu-init:
@@ -262,6 +268,7 @@ grains:
     spec:
       agent:
         name: '{{.inputs.execution_host1}}'
+        service-account: '{{.inputs.service_account}}'
       source:
         store: test-spec2-public
         path: cloudFormation/Bucket.json
@@ -281,6 +288,7 @@ grains:
         store: test-spec2-public
       agent:        
         name: '{{.inputs.execution_host1}}'
+        service-account: '{{.inputs.service_account}}'
       tags:
         auto-tag: false
       scripts:
@@ -307,7 +315,7 @@ grains:
         - test: newValue
       agent:
         name: '{{.inputs.execution_host1}}'
-      #         service-account: "yakirl-sa"
+        service-account: '{{.inputs.service_account}}'
       tags:
         auto-tag: false
       workspace-directories:
@@ -331,6 +339,7 @@ grains:
     spec:
       agent:
         name: '{{.inputs.execution_host1}}'
+        service-account: '{{.inputs.service_account}}'
       files:
         - source: test-spec2-public
           path: scripts/echo.sh        
