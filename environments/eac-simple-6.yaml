@@ -61,3 +61,19 @@ grains:
           attributes:
             assume_role:
               role_arn: "arn:aws:iam::{{ .params.aws_account_id }}:role/quali-torque-deploy"
+
+  tf-providers-retry:
+    kind: terraform
+    spec:
+      source:
+        path: terraform/simple-tf-module
+        store: test-spec2-public
+      agent:
+        name: '{{.inputs.compute_service_name}}'
+      provider-overrides:
+        - name: aws
+          source: hashicorp/aws
+          version: "~>5.0"
+          attributes:
+            assume_role:
+              role_arn: "arn:aws:iam::{{ .params.aws_account_id }}:role/quali-torque-deploy"
