@@ -5,7 +5,7 @@ spec_version: 2
 
 environment:
   environment_name: eac-simple-6
-  description: eac env for testing  1
+  description: eac env for testing provider-overrides
   owner_email: saar.y@quali.com
   state: active
   # spaces:
