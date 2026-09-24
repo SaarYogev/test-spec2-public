@@ -15,7 +15,7 @@ environment:
 inputs:
   compute_service_name:
     type: agent
-    default: test1
+    default: kind-agent
     
   tf_input:
     type: string
