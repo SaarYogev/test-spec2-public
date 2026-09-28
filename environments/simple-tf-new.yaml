@@ -117,7 +117,7 @@ grains:
       agent:
         name: '{{.inputs.compute_service_name}}'
       inputs:
-        - mode: "bad"
+        - mode: "ok"
       provider-overrides:
         - name: aws
           source: hashicorp/aws
