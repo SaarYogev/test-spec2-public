@@ -4,13 +4,13 @@ environment:
   environment_name: eac-simple-env-3
   description: eac env for testing  1
   owner_email: yakir.l@quali.com
-  state: inactive 
+  state: active
 
  
 inputs:
   compute_service_name:
     type: agent
-    default: review1-vido
+    default: kind-agent
     
   tf_input:
     type: string
